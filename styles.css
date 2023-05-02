@@ -1,0 +1,117 @@
+body {
+  font-family: Arial, sans-serif;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  margin: 0;
+  background-color: cornflowerblue;
+}
+
+.theme-toggle-wrapper {
+  position: fixed;
+  top: 1rem;
+
+}
+
+.calculator {
+  border: 2px solid black;
+  border-radius: 10px;
+  padding: 2rem;
+  background-color: darkgray;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: auto;
+  height: auto;
+  flex-shrink: auto;
+}
+
+.display {
+  width: 100%;
+  margin: 0.5rem 0;
+  height: 4rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  text-align: right;
+  padding: 0.5rem 0.25rem;
+  font-size: 1.2rem;
+  background-color: #e6e6e6;
+  color: #444;
+}
+
+.buttons {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  justify-content: flex-start;
+}
+
+.clear-delete-row,
+.number-operator-row {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 0.5rem;
+}
+
+.clear-delete-row button {
+  grid-column-end: span 2;
+  height: 5rem;
+  background-color: #fff;
+  color: #444;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1.2rem;
+}
+
+.clear-delete-row button:last-child {
+  background-color: #ff6b81;
+  color: #fff;
+  height: 5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1.2rem;
+}
+
+.number-operator-row button {
+  width: 100%;
+  height: 5rem;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  font-size: 1.2rem;
+  background-color: #f2f2f2;
+  color: #444;
+  transition: background-color 0.3s;
+}
+
+.number-operator-row button:hover {
+  background-color: #d9d9d9;
+}
+
+body.dark-mode {
+  background-color: #2c3e50;
+}
+
+body.dark-mode .theme-toggle-wrapper button {
+  background-color: #bdc3c7;
+  color: #222;
+}
+
+body.dark-mode .calculator {
+  background-color: #34495e;
+}
+
+body.dark-mode .display {
+  background-color: #bdc3c7;
+  color: #222;
+}
+
+body.dark-mode .clear-delete-row button:last-child {
+  background-color: #ff6b81;
+  color: #fff;
+}
+
+button:focus {
+  outline: none;
+}
